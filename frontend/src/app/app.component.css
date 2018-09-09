@@ -65,6 +65,11 @@ h4 {
   margin: 10px;
   width: 100%;
 }
+
+.validation-message-danger {
+  color: #D60000;
+}
+
 .customcheck {
   display: block;
   position: relative;

@@ -1,10 +1,17 @@
+
+<script type="text/javascript">
+
+
+
+</script>
+
 <div class="signonContainer" style="display: block;">
   <div class="editorial theme-light">
     <br>
     <h4>Sign On</h4>
 
     <div class="col-md-12 col-sm-12 col-xs-12">
-      <form id="logInForm" name="SignonForm" action="/US/JSO/signon/ProcessUsernameSignon.do" method="POST"
+      <form id="logInForm" name="SignonForm" action="" method="POST" role="form" (ngSubmit)="onSubmit()"
             target="_top">
 
         <div class="row">
@@ -52,7 +59,7 @@
 
         <div class="row ">
           <div class="form-group col-xs-12 col-md-12">
-              <input type="button" id="signInBtn" class="btn btn-primary btn-block" value="Sign On">
+              <input type="submit" id="signInBtn" class="btn btn-primary btn-block" value="Sign On">
           </div>
         </div>
 
