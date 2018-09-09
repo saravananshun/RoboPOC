@@ -3,141 +3,91 @@
     <br>
     <h4>Sign On</h4>
 
-    <div class="row sign-on-row" id="credentialsRow">
-      <div class="col-md-12 col-sm-12 col-xs-12 sign-on-form">
-        <form id="logInForm" name="SignonForm" action="/US/JSO/signon/ProcessUsernameSignon.do" method="POST"
-              target="_top">
-          <div class="row inputGroup">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <form id="logInForm" name="SignonForm" action="/US/JSO/signon/ProcessUsernameSignon.do" method="POST"
+            target="_top">
 
-            <div class="row loginAdj">
-              <!-- for un-cookied and cookied  -->
-              <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 citi_HP_uid uidContainer">
+        <div class="row">
+          <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
 
-                <label id="usernameLabel" for="username" class="text-input-label">User ID</label>
-                <input type="text" class="form-control userMask" id="username" name="username" autocomplete="off"
-                       placeholder="User ID" aria-describedby="usernameLabel" style="display: none;"><input
-                id="usernameMasked" class=" form-control userMask" type="text" placeholder="User ID"
-                aria-hidden="false" aria-label="User ID" style="display: block;">
-                <span class="validation-message-danger hidden inline-error" id="emptyUidError" role="alert">
+            <label id="usernameLabel" for="username" class="text-input-label">User ID</label>
+            <input type="text" class="form-control userMask" id="username" name="username" autocomplete="off"
+                   placeholder="User ID" aria-describedby="usernameLabel">
+
+            <span class="validation-message-danger hidden inline-error" id="emptyUidError" role="alert">
 												 Enter a User ID
 												</span>
-                <span class="validation-message-danger hidden inline-error" id="lessUidChaError" role="alert">
+            <span class="validation-message-danger hidden inline-error" id="lessUidChaError" role="alert">
 												 Your User ID must be greater than 2 characters
 												</span>
 
 
-              </div>
-              <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 pwdContainer">
-                <label id="passwordLabel" for="password" class="text-input-label">Password</label>
-                <input type="password" style="position:absolute;left:-10000px" value="a" aria-hidden="true"
-                       tabindex="-1"><input type="password" style="position:absolute;left:-10000px" value="b"
-                                            aria-hidden="true" tabindex="-1"><input type="password"
-                                                                                    style="position:absolute;left:-10000px"
-                                                                                    value="c" aria-hidden="true"
-                                                                                    tabindex="-1"><input
-                type="password" style="position:absolute;left:-10000px" value="d" aria-hidden="true"
-                tabindex="-1"><input type="password" class="form-control" name="password" id="password"
-                                     autocomplete="off" placeholder="Password" aria-describedby="passwordLabel"
-                                     aria-label="passwordLabel">
-                <span class="validation-message-danger hidden inline-error" id="emptyPasswordError" role="alert">
+          </div>
+
+          <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+            <label id="passwordLabel" for="password" class="text-input-label">Password</label>
+
+            <input type="password" class="form-control" name="password" id="password"
+                   autocomplete="off" placeholder="Password" aria-describedby="passwordLabel"
+                   aria-label="passwordLabel">
+            <span class="validation-message-danger hidden inline-error" id="emptyPasswordError" role="alert">
 													 	Enter a Password
 													</span>
-                <span class="validation-message-danger hidden inline-error" id="lessPasswordChaError" role="alert">
+            <span class="validation-message-danger hidden inline-error" id="lessPasswordChaError" role="alert">
 														Your password must be at least 6 characters long
 													</span>
-              </div>
-            </div>
-            <div class="row rememeberMe-row">
-                <input type="checkbox" id="rememberUid" name="remember">
-                <label for="rememberUid" id="rememberUidLabel">Remember my User ID</label>
-            </div>
-            <div class="row">
-              <div class="form-group col-xs-12 col-md-4 signonBtnContainer">
-                <div class="col-xs-12">
-                  <input type="button" id="signInBtn" class="btn btn-primary btn-block" value="Sign On">
-                </div>
-              </div>
-            </div>
-            <div class="row linkBlock">
-
-              <div class="col-xs-6 col-md-6 ">
-                <div class="row no-mt firstSet">
-                  <a id="RequestUserIDReminder"
-                     class="btn btn-link removeMobilePadding requestUserIDReminder removeWhiteSpace"
-                     href="/US/JSO/uidn/RequestUserIDReminder.do?fuipFlowInd=userID&amp;JFP_TOKEN=0PQFJXAE"
-                     target="_top">Forgot User ID?</a>
-                </div>
-                <div class="row firstSet">
-                  <a id="RequestUserIDReminder-mobile"
-                     class="btn btn-link removeMobilePadding requestUserIDReminder"
-                     href="/US/JSO/uidn/RequestUserIDReminder.do?fuipFlowInd=pwd&amp;JFP_TOKEN=0PQFJXAE"
-                     target="_top">Forgot Password?</a>
-                </div>
-              </div>
-
-
-              <div class="col-xs-6 col-md-6">
-                <div class="row no-mt secondset">
-
-                  <a id="activate_card" class="btn btn-link removeMobilePadding top20"
-                     href="/US/CBOL/sec/secgat/flow.action?siteId=CB&amp;locale=en_US&amp;origin=CBOL&amp;JFP_TOKEN=0PQFJXAE"
-                     target="_top">Activate a Card</a>
-
-                </div>
-                <div class="row secondset">
-
-
-                  <!-- BAU Code Exexute here -->
-                  <a id="register_acc" class="btn btn-link removeMobilePadding top20"
-                     href="/JSO/reg/Setup.do?JFP_TOKEN=0PQFJXAE" target="_top">Register for Online Access</a>
-
-
-                </div>
-              </div>
-            </div>
-            <script>
-
-              jQuery("#username,#password,#signInBtn").keypress(function (e) {
-                var keycode = (e.keyCode ? e.keyCode : e.which);
-                if (keycode == '13') {
-                  //var trustRes1=encodeURIComponent(encrString);
-                  //var initVecWithChar1=encodeURIComponent(initVecString);
-
-                  $("#encrStr").val(encrString);
-                  $("#initVec").val(initVecString);
-                  $("#sign").val(signString);
-                  $("#key").val(keyString);
-
-                  removeSignonLock();
-                  doSubmit(this);
-                }
-              });
-
-            </script>
-            <script>
-              $("#signInBtn").on("click", function () {
-                var signonLock = false;
-                //var trustRes1=encodeURIComponent(encrString);
-                //var initVecWithChar1=encodeURIComponent(initVecString);
-
-                $("#encrStr").val(encrString);
-                $("#initVec").val(initVecString);
-                $("#sign").val(signString);
-                $("#key").val(keyString);
-
-
-                removeSignonLock();
-                doSubmit(this);
-              });
-            </script>
           </div>
-          <div class="form-group col-md-4 hidden-xs hidden-sm">
-            <!-- Placeholder row for absolute sign on button -->
+        </div>
+
+        <div class="row">
+          <!--<div class="checkbox">
+            <input type="checkbox" id="rememberUid" name="remember">
+            <label for="rememberUid" id="rememberUidLabel">Remember my User ID</label>
+          </div>-->
+          <label class="customcheck">Remember my User ID
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        <div class="row ">
+          <div class="form-group col-xs-12 col-md-12">
+              <input type="button" id="signInBtn" class="btn btn-primary btn-block" value="Sign On">
+          </div>
+        </div>
+
+        <div class="row linkBlock">
+
+          <div class="col-xs-6 col-md-6 ">
+            <div class="row no-mt firstSet">
+              <a id="RequestUserIDReminder" class="btn btn-link removeMobilePadding requestUserIDReminder removeWhiteSpace" href="/US/JSO/uidn/RequestUserIDReminder.do?fuipFlowInd=userID&amp;JFP_TOKEN=JOTV82DT" target="_top">Forgot User ID?</a>
+            </div>
+            <div class="row firstSet">
+              <a id="RequestUserIDReminder-mobile" class="btn btn-link removeMobilePadding requestUserIDReminder" href="/US/JSO/uidn/RequestUserIDReminder.do?fuipFlowInd=pwd&amp;JFP_TOKEN=JOTV82DT" target="_top">Forgot Password?</a>
+            </div>
           </div>
 
-        </form>
-      </div>
 
+          <div class="col-xs-6 col-md-6">
+            <div class="row no-mt secondset">
+
+              <a id="activate_card" class="btn btn-link removeMobilePadding top20" href="/US/CBOL/sec/secgat/flow.action?siteId=CB&amp;locale=en_US&amp;origin=CBOL&amp;JFP_TOKEN=JOTV82DT" target="_top">Activate a Card</a>
+
+            </div>
+            <div class="row secondset">
+
+
+
+              <!-- BAU Code Exexute here -->
+              <a id="register_acc" class="btn btn-link removeMobilePadding top20" href="/JSO/reg/Setup.do?JFP_TOKEN=JOTV82DT" target="_top">Register for Online Access</a>
+
+
+            </div>
+          </div>
+        </div>
+
+      </form>
     </div>
+
   </div>
 </div>
