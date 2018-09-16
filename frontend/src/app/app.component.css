@@ -19,6 +19,14 @@ h4 {
   margin-bottom: 20px !important;
 }
 
+.center-block {
+  width:370px;
+  padding:10px;
+
+  color:#ec8007;
+  border:solid 2px #ccc;
+}
+
 .signonContainer {
   width: 370px;
   position: absolute;
@@ -138,4 +146,15 @@ h4 {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+/*
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+*/
+
+.invalid-feedback {
+  display: block;
+  color: red;
 }
