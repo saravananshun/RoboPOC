@@ -1,4 +1,4 @@
-package com.shekhargulati.app;
+package com.citi.robopoc;
 
 import java.lang.reflect.Method;
 
@@ -35,7 +35,7 @@ public class Application {
         };
     }
 
-    @Bean
+   /* @Bean
     public WebMvcRegistrationsAdapter webMvcRegistrationsHandlerMapping() {
         Application application = this;
         return new WebMvcRegistrationsAdapter() {
@@ -62,5 +62,5 @@ public class Application {
                 };
             }
         };
-    }
+    }*/
 }

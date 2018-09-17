@@ -1,0 +1,53 @@
+.signonContainer {
+  width: 370px;
+  position: absolute;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  color:#ec8007;
+  border:solid 2px #ccc;
+}
+
+.editorial {
+  padding: 20px 10px;
+  padding-top: 0px;
+}
+
+.cbolui-ddl .theme-light {
+  background: #fff;
+}
+.form-control{
+  background-color: #eee;
+  height: 50px;
+}
+#signInBtn {
+  max-width: 305px;
+  line-height: 30px;
+  margin-left: 0;
+}
+
+.signinbuttoncontainer{
+  margin: 10px;
+  width: 100%;
+}
+
+.validation-message-danger {
+  color: #D60000;
+}
+
+
+.invalid-feedback {
+  display: block;
+  color: red;
+}
+
+.backdrop{
+  background-color:rgba(0,0,0,0.6);
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+}

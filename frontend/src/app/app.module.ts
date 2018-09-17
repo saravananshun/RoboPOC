@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import {FormsModule} from "@angular/forms";
 import { ConfirmationdialogComponent } from './confirmationdialog/confirmationdialog.component';
 import { LoginComponent } from './login/login.component';
+import {LoginService} from "./service/loginservice";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     MatDialogModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent],
   entryComponents: [ ConfirmationdialogComponent ]
 })

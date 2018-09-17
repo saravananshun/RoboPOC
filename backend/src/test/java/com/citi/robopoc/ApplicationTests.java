@@ -1,4 +1,4 @@
-package com.shekhargulati.app;
+package com.citi.robopoc;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

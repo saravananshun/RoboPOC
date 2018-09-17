@@ -15,11 +15,12 @@
   </properties>
 
   <build>
-    <resources>
+    <!--<resources>
       <resource>
-        <directory>frontend</directory>
+        <directory>META-INF/resources</directory>
+
       </resource>
-    </resources>
+    </resources>-->
     <plugins>
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
@@ -41,7 +42,7 @@
         <artifactId>frontend-maven-plugin</artifactId>
         <version>1.6</version>
         <executions>
-          <execution>
+         <!-- <execution>
             <id>install node and npm</id>
             <goals>
               <goal>install-node-and-npm</goal>
@@ -50,9 +51,9 @@
               <nodeVersion>v8.9.0</nodeVersion>
               <npmVersion>5.5.1</npmVersion>
             </configuration>
-          </execution>
+          </execution>-->
 
-          <execution>
+          <!--<execution>
             <id>npm run build</id>
             <goals>
               <goal>npm</goal>
@@ -60,7 +61,7 @@
             <configuration>
               <arguments>run build</arguments>
             </configuration>
-          </execution>
+          </execution>-->
 
         </executions>
       </plugin>

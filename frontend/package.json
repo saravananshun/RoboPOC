@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build -prod --output-path META-INF/resources",
     "test": "ng test --watch false",
     "test-watch": "ng test",
@@ -28,6 +28,7 @@
     "core-js": "^2.4.1",
     "jquery": "^3.3.1",
     "rxjs": "^6.3.2",
+    "rxjs-compat": "^6.2.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
