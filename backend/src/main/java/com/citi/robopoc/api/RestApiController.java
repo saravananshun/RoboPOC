@@ -24,6 +24,11 @@ public class RestApiController {
     @RequestMapping(value = "/api/login", method = RequestMethod.POST)
     public String login(@RequestBody UserLogin login) {
         System.out.println("Login Map " + login);
-        return "{\"sucess\":\"true\"}";
+        if(login.getUserName().equalsIgnoreCase("saravanan")){
+            return "{\"success\":\"true\"}";
+        }else{
+            return "{\"success\":\"false\"}";
+        }
+
     }
 }

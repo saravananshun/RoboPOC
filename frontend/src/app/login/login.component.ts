@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   animal: string;
   name: string;
   displayPopup:string = "none";
+  serverError:boolean = false;
 
   constructor(private loginService:LoginService) { }
 
@@ -23,10 +24,14 @@ export class LoginComponent implements OnInit {
 
   public onSubmit() {
     var userLogin = new UserLogin(this.model.userName, this.model.password);
+    this.serverError = false;
     this.loginService.login(userLogin).subscribe(results => {
-      this.displayPopup = "block";
+      if(results[0].success == 'true'){
+        this.displayPopup = "block";
+      }else{
+        this.serverError = true;
+      }
     });
-
   }
 
   public onCloseHandled(){
